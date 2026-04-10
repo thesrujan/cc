@@ -131,7 +131,7 @@ export default function CartDrawer() {
                 disabled={isProcessing}
                 className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-md hover:shadow-xl transform transition hover:-translate-y-1 active:translate-y-0 disabled:opacity-70 flex justify-center items-center"
               >
-                {isProcessing ? "Processing..." : "Pay with Cloud Stripe Card"}
+                {isProcessing ? "Processing..." : "Secure Card Payment"}
               </button>
               
               <button 
@@ -139,7 +139,7 @@ export default function CartDrawer() {
                 disabled={isProcessing}
                 className="w-full py-3 px-6 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold shadow-md hover:shadow-xl transform transition hover:-translate-y-1 active:translate-y-0 disabled:opacity-70 flex justify-center items-center"
               >
-                Pay with Cash on Delivery
+                Cash on Delivery
               </button>
             </div>
             
