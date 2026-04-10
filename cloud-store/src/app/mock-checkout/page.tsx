@@ -95,17 +95,25 @@ export default function MockCheckoutPage() {
       <div className="flex-1 flex flex-col items-center justify-center p-4">
         <div className="w-full max-w-md bg-white dark:bg-neutral-900 rounded-2xl shadow-xl dark:shadow-none p-8 border border-neutral-200 dark:border-neutral-800">
           <div className="flex justify-between items-center mb-6">
-            <h1 className="text-2xl font-extrabold text-neutral-900 dark:text-white">Secure Checkout</h1>
-            <Lock className="w-5 h-5 text-neutral-400" />
+            <h1 className="text-xl font-bold text-neutral-900 dark:text-white uppercase tracking-tighter">Aura Secure <span className="text-blue-600">Cloud Gateway</span></h1>
+            <ShieldCheck className="w-6 h-6 text-blue-600" />
+          </div>
+
+          <div className="mb-8 p-3 bg-neutral-50 dark:bg-neutral-800/50 rounded-xl border border-neutral-200 dark:border-neutral-700 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+               <Lock className="w-4 h-4 text-neutral-400" />
+               <span className="text-xs font-semibold text-neutral-500">256-BIT ENCRYPTION</span>
+            </div>
+            <span className="text-[10px] font-bold text-blue-600">ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}</span>
           </div>
 
           {/* Auto-Fill Banner */}
           {autoFilled && selectedCard && (
-            <div className="mb-6 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl flex items-center gap-3">
-              <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
+            <div className="mb-6 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex items-center gap-3">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
               <div>
-                <p className="text-sm font-semibold text-green-800 dark:text-green-400">Auto-filled from your Cloud account</p>
-                <p className="text-xs text-green-700 dark:text-green-500">{selectedCard.cardType} ending in {selectedCard.cardLastFour}</p>
+                <p className="text-sm font-semibold text-blue-800 dark:text-blue-400">Cloud Auto-Fill Enabled</p>
+                <p className="text-xs text-blue-700 dark:text-blue-500">{selectedCard.cardType} •••• {selectedCard.cardLastFour}</p>
               </div>
             </div>
           )}
